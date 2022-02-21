@@ -14,3 +14,9 @@
       name: tree
       state: present
      when: ansible_distribution == "Ubuntu"
+
+
+   - name: Create user
+     user:
+      name: Nana
+      comment: Axel Nana
