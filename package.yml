@@ -3,20 +3,20 @@
   ignore_errors: yes
   become: yes
   tasks:
-   - name: Install tree
+   - name: Install docker
      yum:
-      name: tree
+      name: docker
       state : present
      when : ansible_distribution == "CentOS"
 
-   - name: Install tree on Ubuntu server
+   - name: Install docker on Ubuntu server
      apt: 
-      name: tree
+      name: docker
       state: present
      when: ansible_distribution == "Ubuntu"
 
 
    - name: Create user
      user:
-      name: Nana
+      name: Axel
       comment: Axel Nana
